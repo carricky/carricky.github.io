@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+
+
+<!-- USE SIDEBAR -->
+    <!-- PostList Container -->
+    		<div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                postlist-container
+            ">
+    			{{ content }}
+    		</div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Categories -->
+                {% if site.categories %}
+                <section>
+                    <h5><a href="/blogs"  >Categories</a></h5>
+                    <ul class="list-group ul-boxed">
+                        {% for category in site.categories  %}
+                            <a href="/categories/#{{ category[0] }}" class="list-group-item">
+                            <span class="badge">{{ category[1] | size }}</span>
+                                {{ category[0] }}                              
+                            </a>
+                        {% endfor %}                        
+                    </ul>
+                {% endif %}
+                {% if site.featured-tags %}
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}" >Featured Tags</a></h5>
+                    <div class="tags">
+                        {% for tag in site.tags %}
+                            {% if tag[1].size > {{site.featured-condition-size}} %}
+                                <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                                    {{ tag[0] }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
+    		</div>
+	</div>
+</div>

@@ -1,0 +1,37 @@
+---
+layout: base
+title: "Projects"
+---
+
+<!-- we can only use site.posts instead of paginator.posts due to the setting of paginator
+that it's only available in index.html -->
+<h1>2015</h1>
+<ul class="publication-list">
+<li>
+    <div style="color:#333333; font-weight:bold">
+        Poisson image blending
+    </div>
+        By Siyuan Gao
+    <div style="font-style:italic">
+        Course Project, July 2015
+    </div>
+    <a href="/attach/blender.pdf" class="btn btn-default" role="button">PDF</a>
+    <!-- <a href="/attach/blender.pdf">PDF</a> -->
+</li>
+</ul>
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}

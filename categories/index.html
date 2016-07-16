@@ -1,0 +1,38 @@
+---
+layout: blog
+header-img: "img/bg/blogs-bg.jpg"
+---
+<div class="clearfix">
+  <div class="post-preview">
+  {% for post in site.posts %}
+  {% assign item = post %}
+  {% assign index = true %}
+  <section class="post {% for category in item.categories %}{{ category }} {% endfor %}" itemscope itemprop="blogPost">
+  <div class="post-preview">
+    <a href="{{ item.link }}" target="_blank"> 
+    <h2 itemprop="name" class="post-title">
+	    {% if item.title %}
+	    {{ item.title }}
+	    {% else %}
+	    &nbsp;
+	    {% endif %}
+    </h2>
+    {% if item.subtitle %}
+    <h3 class="post-subtitle">
+        {{ item.subtitle }}
+    </h3>
+    {% endif %}
+    <div class="post-content-preview">
+        {{ item.content | strip_html | truncate:200 }}
+    </div>
+  	</a>
+    <p class="post-meta">
+        Posted by {% if item.author %}{{ item.author }}{% else %}{{ site.title }}{% endif %} on {{ item.date | date: "%B %-d, %Y" }}
+    </p>
+  </div>
+  </section>
+  {% endfor %}
+  </div>
+</div>
+
+

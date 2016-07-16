@@ -1,0 +1,86 @@
+---
+layout: page
+title: "About"
+header-img: "img/bg/about-bg.jpg"
+---
+
+<div class="en post-container">
+    <section class="foreground-content">
+        <h4 style="font-family: Georgia, serif;">Biography</h4>
+        <p>
+        Hi, my name is <strong>Siyuan Gao (高思远)</strong>. My first name is pronounced pretty much as See Young, but it's still hard to remember, so you are also welcome to call me <strong>Ricky</strong>. 
+        </p>
+        <p>
+            I was born in Zibo, China, and left my hometown for college in Hangzhou, China, where I finished my bachelor degree in <a href="http://www.zju.edu.cn/english/">Zhejiang University</a>. Zhejiang University is one of the most prestigious universities in China. For now, I will join <a href="http://www.yale.edu/">Yale Univeristy </a> as a Ph.D. student in the summer of 2016. Keep updated with this website to see more of my future life in Yale. 
+        </p>
+    </section>
+    <section class="foreground-content list-group">
+        <h4 style="font-family: Georgia, serif;">Research</h4>
+        <div class="list-group ul-boxed" style="max-width:600px">
+            <div class="list-group-item" >Machine Learning</div>
+            <div class="list-group-item" >Computational Neuroscience</div>
+            <div class="list-group-item" >Computational Vision</div>
+        </div>
+    </section>
+    <section>
+        <h4 style="font-family: Georgia, serif;">Skills</h4>
+        <div class="tags" >
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">Matlab</div>
+            <div class="skill-tag">C++</div>
+            <div class="skill-tag">Machine Learning</div>
+        </div>
+    </section>
+    <section class="foreground-content">
+        <h4 style="font-family: Georgia, serif;">Resume</h4>
+        <ul>
+        <li><a href="/attach/2016_06_CV_Siyuan_Gao.pdf">2016_Siyuan_Gao</a></li>
+        </ul>
+    </section>
+</div>
+
+
+{% if site.duoshuo_username %}
+<!-- 多说评论框 start -->
+<!-- <div class="comment">
+    <div class="ds-thread"
+    {% if site.duoshuo_username == "huxblog" %}
+        data-thread-id="1187623191091085319"
+    {% else %}
+        data-thread-key="{{site.duoshuo_username}}/about"
+    {% endif %}
+
+    data-title="{{page.title}}"
+    data-url="{{site.url}}/about/"></div>
+</div> -->
+<div class="ds-thread" data-thread-key="{{site.duoshuo_username}}/about" data-title="{{page.title}}" ></div>
+<!-- 多说评论框 end -->
+
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"siyuangao"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
+{% endif %}
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79368743-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

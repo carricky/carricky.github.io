@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+<!-- image for wechat share -->
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+<img src="/img/icon_wechat.png" width='600'>
+</div>
+
+    {% include nav.html %}
+<div id="container">
+	<div id="content">
+	    {{ content }}
+	</div>
+</div>
+	    {% include footer.html %}
+
+<!-- Migrate from head to bottom, no longer block render and still work -->
+<script src="/js/lightbox.js"></script>
+
+</body>
+
+</html>
