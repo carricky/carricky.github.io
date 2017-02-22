@@ -9,7 +9,8 @@ header-img: "img/bg/blogs-bg.jpg"
   {% assign index = true %}
   <section class="post {% for category in item.categories %}{{ category }} {% endfor %}" itemscope itemprop="blogPost">
   <div class="post-preview">
-    <a href="{{ item.link }}" target="_blank"> 
+    <!-- <a href="{{ item.link }}" >  -->
+    <a href="{{ post.url | prepend: site.baseurl }}">
     <h2 itemprop="name" class="post-title">
 	    {% if item.title %}
 	    {{ item.title }}
