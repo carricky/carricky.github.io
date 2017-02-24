@@ -1,0 +1,261 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"frequ",
+				"frequency_list"
+			],
+			[
+				"test",
+				"test_num"
+			],
+			[
+				"inter",
+				"interval_set"
+			],
+			[
+				"o1",
+				"o1_post"
+			],
+			[
+				"o2",
+				"o2_post"
+			],
+			[
+				"fre",
+				"frequency_list"
+			],
+			[
+				"interval",
+				"interval"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "package",
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/siyuangao/Working_Space/carricky.github.io/_layouts/default.html",
+		"/Users/siyuangao/Working_Space/carricky.github.io/after_footer.html",
+		"/Users/siyuangao/Working_Space/carricky.github.io/_includes/footer.html",
+		"/Users/siyuangao/Working_Space/carricky.github.io/about.html",
+		"/Users/siyuangao/Documents/fmri/hcp_cca.m",
+		"/Users/siyuangao/Documents/fmri/code/cpm/pmat_data.txt",
+		"/Users/siyuangao/Documents/fmri/nn_code/codeshare_identification.m",
+		"/Users/siyuangao/Documents/fmri/nn_code/codeshare_subID_randomization.m",
+		"/Users/siyuangao/Documents/STAT_665/HW1/HW1_sol.Rmd",
+		"/Users/siyuangao/Documents/fmri/nn_code/codeshare_behavioralprediction.m",
+		"/private/var/folders/sq/8ldgn64j2jn_llxbnpftm8kw0000gn/T/a0cbd609-447a-4503-8e4a-1e1f0e6079b3/home/accts/sg972/hidden/6778894677/Homework0/B.py",
+		"/Users/siyuangao/Documents/爸妈护照/预约签证：zbgfy@sohu.com 2865307gfy",
+		"/Users/siyuangao/Documents/neuroscience/stdp-mnist/Diehl&Cook_MNIST_evaluation.py",
+		"/Users/siyuangao/Documents/neuroscience/stdp-mnist/Diehl&Cook_spiking_MNIST.py",
+		"/Users/siyuangao/Documents/neuroscience/tripletBCM/Clopath_et_al_2010_homeostasis.py",
+		"/Users/siyuangao/Documents/neuroscience/tripletBCM/poissonSTDP.py",
+		"/Users/siyuangao/Documents/neuroscience/tripletBCM/STDP.m",
+		"/Users/siyuangao/Documents/neuroscience/tripletBCM/stdp.py",
+		"/Users/siyuangao/Documents/neuroscience/stdp-mnist/mnist/t10k-images-idx3-ubyte",
+		"/Users/siyuangao/Documents/carricky.github.io/projects.html",
+		"/Users/siyuangao/Documents/CPSC 575/Homework+3/homework3_answer.m",
+		"/Users/siyuangao/Documents/NYU/infoseer-vis-2016-oe-83c0883559ca/source/outlier_explorer_v3/app/routes/testing/generateIrregularData.m",
+		"/Users/siyuangao/Documents/ENAS 510/PROBLEM SET/HW3/R_T_fmri.m",
+		"/Users/siyuangao/Documents/CPSC 575/Homework 2/homework2_answer/Homework_2.m",
+		"/Users/siyuangao/Documents/ENAS 510/PROBLEM SET/matlab/runT1.m",
+		"/Users/siyuangao/Documents/carricky.github.io/misc.html",
+		"/Users/siyuangao/Documents/CPSC 575/HW_sample.m",
+		"/Users/siyuangao/Documents/carricky.github.io/_config.yml",
+		"/Users/siyuangao/Documents/carricky.github.io/_posts/2016-7-10-the-post-3605.md"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"post-title",
+			"content",
+			"padding",
+			"poisson",
+			"rates",
+			">>>",
+			"v_lowpass",
+			"x_trace",
+			"voltage",
+			"poisson",
+			"filter2"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 158.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "blogs.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

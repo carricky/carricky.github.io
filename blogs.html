@@ -6,6 +6,7 @@ header-img: "img/bg/banner.png"
 
 <!-- we can only use site.posts instead of paginator.posts due to the setting of paginator
 that it's only available in index.html -->
+
 {% for post in site.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
