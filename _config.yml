@@ -68,7 +68,7 @@ ga_domain: siyuangao.com
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Math, Coding, Life"
+sidebar-about-description: "Math, Brain, Life"
 sidebar-avatar: /img/avatar-siyuan.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
