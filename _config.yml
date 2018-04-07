@@ -2,7 +2,7 @@
 title: Siyuan Gao.
 SEOTitle: Siyuan Gao's website
 header-img: img/bg/home-bg.jpg
-email: rickygao213@gmail.com
+email: siyuan.gao@gmail.com
 description: "Siyuan Gao's personal website"
 keyword: "Siyuan Gao, Tech, Yale, Zhejiang University"
 url: "http://siyuangao.com"              # your host, for absolute URL
@@ -16,9 +16,10 @@ port: 5000
 #zhihu_username:     siyuan-gao
 github_username:    carricky
 #twitter_username:  huxpro
-facebook_username:  siyuangaoricky
+# facebook_username:  siyuangaoricky
 linkedin_username:  siyuangao
-email_account:      rickygao213@gmail.com
+google_scholar:     3o53DbEAAAAJ
+email_account:      siyuan.gao@gmail.com
 
 
 # Build settings

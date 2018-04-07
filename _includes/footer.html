@@ -48,13 +48,22 @@
                         </a>
                     </li>
                     {% endif %}
-
+                    
 
                     {% if site.facebook_username %}
                     <li>
                         <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
                             <span class="fa-stack fa-md">
                                 <i class="fa fa-facebook fa-stack-1x"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.google_scholar %}
+                    <li>
+                        <a target="_blank" href="https://scholar.google.com/citations?user={{site.google_scholar}}&hl=en">
+                            <span class="fa-stack fa-md">
+                                <i class="fa fa-google fa-stack-1x"></i>
                             </span>
                         </a>
                     </li>
@@ -86,15 +95,7 @@
                         </a>
                     </li>
                     {% endif %}
-                    {% if site.google_scholar %}
-                    <li>
-                        <a target="_blank" href="https://scholar.google.com/citations?user={{site.google_scholar}}&hl=en">
-                            <span class="fa-stack fa-md">
-                                <i class="fa fa-google fa-stack-1x"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
+
                 </ul>
             </div>
             <div class="col-sm-8">
