@@ -75,7 +75,7 @@ sidebar-avatar: /img/brain.png     # use absolute URL, seeing it's used in both 
 
 
 # Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
+featured-tags: false                     # whether or not using Feature-Tags
 categories: true
 featured-condition-size: 0              # A tag will be featured if the size of it is more than this condition value
 
