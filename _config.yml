@@ -2,7 +2,7 @@
 title: Siyuan Gao.
 SEOTitle: Siyuan Gao's website
 header-img: img/bg/home-bg.jpg
-email: siyuan.gao@gmail.com
+email: siyuan.gao@yale.edu
 description: "Siyuan Gao's personal website"
 keyword: "Siyuan Gao, Tech, Yale, Zhejiang University"
 url: "http://siyuangao.com"              # your host, for absolute URL
@@ -19,7 +19,7 @@ github_username:    carricky
 # facebook_username:  siyuangaoricky
 linkedin_username:  siyuangao
 google_scholar:     3o53DbEAAAAJ
-email_account:      siyuan.gao@gmail.com
+email_account:      siyuan.gao@yale.edu
 
 
 # Build settings
@@ -70,7 +70,7 @@ ga_domain: siyuangao.com
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Math, Brain, Life"
-sidebar-avatar: /img/avatar-siyuan.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/brain.png     # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
