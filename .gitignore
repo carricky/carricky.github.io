@@ -2,6 +2,7 @@ _site
 node_modules
 npm-debug.log
 .DS_Store
+.MWebMetaData
 */.DS_Store
 */*/.DS_Store
 *.sh
