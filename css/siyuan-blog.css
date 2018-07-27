@@ -367,7 +367,8 @@ pre code {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 2px;
-    border-bottom: 10px solid #e9eaee !important;
+    border-bottom: 3px solid #e9eaee !important;
+    transition: top 0.3s;
 }
 
 .navbar-nav li a:hover {
@@ -1003,6 +1004,7 @@ img::-moz-selection {
 
 .banner {
   padding: 0px;
+  margin-top: -8px;
 }
 
 .foreground-content a{
