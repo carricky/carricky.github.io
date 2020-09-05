@@ -3,6 +3,7 @@ node_modules
 npm-debug.log
 .DS_Store
 .MWebMetaData
+.jekyll-cache
 */.DS_Store
 */*/.DS_Store
 *.sh
