@@ -88,3 +88,6 @@ friends: [
         href: "https://www.linkedin.com/in/wenye-wang-b6090569/"
     }
 ]
+
+# plug
+plugins: [jekyll-paginate]
