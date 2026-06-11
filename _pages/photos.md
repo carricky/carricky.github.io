@@ -14,7 +14,32 @@ nav_order: 3
 <!-- Auto-generated from https://500px.com/carricky via the 500px API at build
      time; a daily scheduled rebuild keeps this in sync with new uploads. -->
 
-<div class="row">
+<!-- Scoped grid: al-folio's Tailwind build purges arbitrary grid utilities and
+     hijacks Bootstrap's base `col-N`, so define the responsive grid directly
+     here. 2 columns on phones, 3 from the small breakpoint up. -->
+<style>
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @media (min-width: 576px) {
+    .photo-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .photo-grid a {
+    display: block;
+  }
+  .photo-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3 / 2;
+  }
+</style>
+
+<div class="photo-grid">
   {% for photo in photos limit: 9 %}
     {% comment %} pick the 440px thumbnail, fall back to the first image {% endcomment %}
     {% assign thumb = "" %}
@@ -22,11 +47,9 @@ nav_order: 3
       {% if img.size == 440 %}{% assign thumb = img.https_url | default: img.url %}{% endif %}
     {% endfor %}
     {% if thumb == "" %}{% assign thumb = photo.images.first.https_url | default: photo.images.first.url %}{% endif %}
-    <div class="col-sm-4 mb-4">
-      <a href="https://500px.com{{ photo.url }}" target="_blank" rel="noopener" title="{{ photo.name | escape }}">
-        <img class="img-fluid rounded z-depth-1" loading="lazy" src="{{ thumb }}" alt="{{ photo.name | escape }}">
-      </a>
-    </div>
+    <a href="https://500px.com{{ photo.url }}" target="_blank" rel="noopener" title="{{ photo.name | escape }}">
+      <img class="rounded z-depth-1" loading="lazy" src="{{ thumb }}" alt="{{ photo.name | escape }}">
+    </a>
   {% endfor %}
 </div>
 
