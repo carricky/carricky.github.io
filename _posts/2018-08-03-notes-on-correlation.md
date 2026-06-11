@@ -2,6 +2,7 @@
 title: 'Notes on correlation'
 layout: post
 categories: statistics
+description: Pearson's r, coefficient of determination, and how to interpret them
 ---
 
 ## Terms
