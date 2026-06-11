@@ -1,10 +1,9 @@
 ---
 title: 'Notes on correlation'
 layout: post
-category: statistics
+categories: statistics
 ---
 
-# Notes on correlation
 ## Terms
 Pearson correlation coefficient, coefficient of determination
 
