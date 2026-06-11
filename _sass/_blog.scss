@@ -208,3 +208,14 @@
     }
   }
 }
+
+// Local override: constrain inline images in post bodies. al-folio leaves
+// raw markdown <img> unbounded, so large photos (e.g. a 4256px car shot)
+// overflow the content column. Cap width, center, and round the corners.
+.post-content img {
+  display: block;
+  max-width: min(100%, 680px);
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+}
