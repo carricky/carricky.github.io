@@ -23,5 +23,9 @@ module.exports = {
     // and page chrome (scroll-progress bar, ToC) bleeds through a zoomed image.
     "medium-zoom-overlay",
     "medium-zoom-image--opened",
+    // Local post-body image sizing rule (_sass/_blog.scss). al-folio doesn't
+    // style .post-content itself, so PurgeCSS treats the class as unused and
+    // strips the rule unless it's safelisted.
+    "post-content",
   ],
 };
