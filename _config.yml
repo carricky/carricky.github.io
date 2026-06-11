@@ -678,7 +678,13 @@ third_party_libraries:
 
 jekyll_get_json:
   - data: resume
-    json: assets/json/resume.json # it can also be an url
+    json: assets/json/resume.json
+  # Pull the latest photos from my 500px gallery at build time. A scheduled
+  # rebuild (see .github/workflows/deploy.yml) refreshes this daily, so new
+  # uploads appear without editing the repo. If the fetch fails, the plugin
+  # skips it and the photos page falls back to its built-in images.
+  - data: photos500px
+    json: https://api.500px.com/v1/photos?feature=user&username=carricky&rpp=50&image_size[]=440&image_size[]=1080&sort=created_at # it can also be an url
 
 jsonresume:
   - basics

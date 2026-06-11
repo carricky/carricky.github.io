@@ -55,6 +55,9 @@ on:
       - "!docs/FAQ.md"
       - "!docs/INSTALL.md"
       - "!README.md"
+  # Daily rebuild so the photos page re-pulls the latest 500px gallery.
+  schedule:
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 permissions:
