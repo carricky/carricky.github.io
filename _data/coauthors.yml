@@ -1,34 +1,35 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+# Maps coauthor surnames (lowercase) to homepages, so jekyll-scholar can
+# auto-link their names in the publications list. firstname lists every
+# initial/spelling variant used across the bib so matching is robust.
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"scheinost":
+  - firstname: ["Dustin", "D."]
+    url: https://medicine.yale.edu/profile/dustin-scheinost/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"mishne":
+  - firstname: ["Gal", "G."]
+    url: https://mishne.ucsd.edu/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"constable":
+  - firstname: ["R. Todd", "Todd", "Todd R.", "R. T.", "T."]
+    url: https://medicine.yale.edu/profile/todd-constable/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"greene":
+  - firstname: ["Abigail", "Abigail S.", "A.", "A. S."]
+    url: https://medicine.yale.edu/profile/abigail-greene/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"chun":
+  - firstname: ["Marvin M.", "Marvin", "M. M."]
+    url: https://psychology.yale.edu/people/marvin-chun
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"rosenberg":
+  - firstname: ["Monica D.", "Monica", "M. D."]
+    url: https://psychology.uchicago.edu/directory/Monica-Rosenberg
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"noble":
+  - firstname: ["Stephanie", "S."]
+    url: https://sneuroble.github.io/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"zhao":
+  - firstname: ["Hongyu", "H."]
+    url: https://ysph.yale.edu/profile/hongyu-zhao/
