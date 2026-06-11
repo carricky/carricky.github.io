@@ -2,7 +2,7 @@
 layout: page
 permalink: /photos/
 title: photos
-description: Pulled live from my 500px gallery. Click any frame to view it on 500px.
+description: A few favorites from my 500px gallery. Click any frame to view it on 500px.
 nav: true
 nav_order: 3
 ---
@@ -15,7 +15,7 @@ nav_order: 3
      time; a daily scheduled rebuild keeps this in sync with new uploads. -->
 
 <div class="row">
-  {% for photo in photos %}
+  {% for photo in photos limit: 9 %}
     {% comment %} pick the 440px thumbnail, fall back to the first image {% endcomment %}
     {% assign thumb = "" %}
     {% for img in photo.images %}

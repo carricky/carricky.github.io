@@ -684,7 +684,7 @@ jekyll_get_json:
   # uploads appear without editing the repo. If the fetch fails, the plugin
   # skips it and the photos page falls back to its built-in images.
   - data: photos500px
-    json: https://api.500px.com/v1/photos?feature=user&username=carricky&rpp=50&image_size[]=440&image_size[]=1080&sort=created_at # it can also be an url
+    json: https://api.500px.com/v1/photos?feature=user&username=carricky&rpp=9&image_size[]=440&image_size[]=1080&sort=highest_rating # it can also be an url
 
 jsonresume:
   - basics
