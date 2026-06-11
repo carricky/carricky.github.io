@@ -20,7 +20,7 @@ $$ \rho _{X,Y}={\frac {E [(X-\mu _{X})(Y-\mu _{Y})]}{\sigma _{X}\sigma _{Y}}} $$
 **coefficient of determination ($$ R^2 $$)**
 > Definition: the proportion of the variance in the dependent variable that is predictable from the independent variable(s).
 
-$$ R^{2}\equiv 1-{SS_{\rm {res}} \over SS_{\rm {tot}}}.\ $$
+$$ R^{2}\equiv 1-{SS_{\rm {res}} \over SS_{\rm {tot}}} $$
 
 When we test the models performance, $$ R^2 $$ measures the size of the residuals from the model compared to the size of the residuals from a null model (mean value). On the training data, as the model cannot be worse than the null model, $$ R^2 $$ will always be positive. It may not be the case for the testing data as the model can do worse than the null model.
 
