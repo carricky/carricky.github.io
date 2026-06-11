@@ -1,6 +1,13 @@
 ---
 version: 1
 overrides:
+  _sass/_blog.scss:
+    owner: al_folio_core
+    gem_version: 1.0.11
+    upstream_path: _sass/_blog.scss
+    upstream_sha256: 9981a7ce49cb02f7cca1b3d147097e7170524d917a9d3f273927f129262ec3a1
+    local_sha256: 3ff5483ddaee43a9e1798ab17cdd02dfb8d99a886cf24e3aca7cba32589e086b
+    acknowledged_at: '2026-06-11'
   _sass/_themes.scss:
     owner: al_folio_core
     gem_version: 1.0.11
