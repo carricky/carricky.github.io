@@ -137,10 +137,10 @@ related_blog_posts:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
-  repo: # <your-github-user-name>/<your-github-repo-name>
-  repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
-  category: Comments # name of the category under which discussions will be created
-  category_id: # leave empty or specify your category_id (see https://giscus.app/)
+  repo: carricky/carricky.github.io
+  repo_id: MDEwOlJlcG9zaXRvcnk2MzQ5MTY4OQ==
+  category: Announcements # name of the category under which discussions will be created
+  category_id: DIC_kwDOA8jOac4DB3Eg
   mapping: title # identify discussions by post title
   strict: 1 # use strict identification mode
   reactions_enabled: 1 # enable (1) or disable (0) emoji reactions

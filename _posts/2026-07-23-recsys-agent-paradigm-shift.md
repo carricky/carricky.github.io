@@ -3,6 +3,7 @@ title: 'From Score-and-Rank to System Evolution: The LLM-Agent Paradigm Shift in
 layout: post
 categories: machine-learning
 description: Why going all-in and replacing the whole recommendation stack with an LLM agent is usually the wrong move, and what should actually change across memory, reasoning, compute, reward, and simulation
+giscus_comments: true
 ---
 
 <div class="lang-switch">
@@ -100,7 +101,7 @@ $$ R_{total} = \alpha \cdot R_{immediate} + \beta \cdot \Delta(Memory\_State) $$
 
 (illustrative formula)
 
-In this kind of hybrid design — combining explicit memory with generative recommendation — the system no longer tries to directly predict retention seven days out. Instead, it evaluates whether the current interaction successfully moved the user's explicit memory document (Profile Memory) toward a healthier "target state." By mapping immediate click reward and long-term engagement reward into a single blended score (a P-Score), the explicit memory layer acts as a smoother for delayed reward, substantially easing RL training divergence in a high-noise, high-drift environment. **[TODO: fill in the concrete measurement for ΔMemory_State and the P-Score.]**
+In this kind of hybrid design — combining explicit memory with generative recommendation — the system no longer tries to directly predict retention seven days out. Instead, it evaluates whether the current interaction successfully moved the user's explicit memory document (Profile Memory) toward a healthier "target state." By mapping immediate click reward and long-term engagement reward into a single blended score (a P-Score), the explicit memory layer acts as a smoother for delayed reward, substantially easing RL training divergence in a high-noise, high-drift environment. To be upfront about it: this formula is my own synthesis, not a quote from a single paper — it's what ARS's confidence-weighted preference chunks and OneRec-style reward blending would look like combined. I haven't found a published P-Score weighting; the point is the shape of the idea, not a specific coefficient.
 
 ## 5. The Safe Test Track: Where User Simulators Have to Stay Honest
 
@@ -118,9 +119,7 @@ The newer generation of simulators — represented by work like ["Learning User 
 
 To keep the simulator itself from collapsing into adversarial reward hacking, the core idea is: don't force the simulator to rigidly reproduce "what one specific user said in the past." Instead, use RL to push the simulator's generated interaction sequences to the point where even an LLM judge can't tell them apart from the real thing.
 
-**A finding on closing the sim-to-real gap**: some work has observed something counterintuitive — a recommendation policy trained against a weaker simulated user sometimes performs better against a strong evaluator, or even real users. **[TBD: need a citation for this.]**
-
-The likely reason is that real users, in real settings, tend to be more cooperative — they give smoother, more forgiving guiding input. That goes a long way toward easing the industry's worry about a catastrophic sim-to-real gap.
+**A finding on closing the sim-to-real gap, worth being precise about**: the intuitive story here — that a "weaker," more cooperative simulated user closes the sim-to-real gap because real users tend to be more forgiving than a synthetic one — doesn't hold up well against the evidence. A 2026 paper, ["Beyond Cooperative Simulators"](https://arxiv.org/abs/2605.12894), reports close to the opposite: agents trained against more realistic, behaviorally diverse simulated personas were about 17% more robust on out-of-distribution behavior than agents trained against homogeneous, cooperative simulators. So the actual fix for the sim-to-real gap isn't a weaker, easier simulator — it's one that's a more honest, less cooperative stand-in for how real users actually behave.
 
 Even so, fully closing off exploitation of simulator quirks (reward hacking against the simulator's blind spots) remains genuinely hard. The most realistic, industry-proven path right now is still a hybrid loop: the simulator serves as a sandbox for large-scale, tens-of-thousands-of-steps pretraining, calibrated against a small slice of real online A/B traffic.
 
@@ -231,7 +230,7 @@ $$ R_{total} = \alpha \cdot R_{immediate} + \beta \cdot \Delta(Memory\_State) $$
 
 （示意公式）
 
-在一类融合显式记忆与生成式推荐的混合设计中，系统不再直接预测 7 天后的留存，而是评估当前的交互 Action 是否成功推动了用户显式记忆文档（Profile Memory）向更加健康的"目标状态"演进。通过把即时点击奖励与长期用户活跃度奖励映射为一个混合分数（P-Score），显式记忆层充当了延迟 Reward 的平滑器，极大缓解了高噪声、高漂移环境下的 RL 训练发散问题。**[待补：ΔMemory_State 与 P-Score 的具体度量方式]**
+在一类融合显式记忆与生成式推荐的混合设计中，系统不再直接预测 7 天后的留存，而是评估当前的交互 Action 是否成功推动了用户显式记忆文档（Profile Memory）向更加健康的"目标状态"演进。通过把即时点击奖励与长期用户活跃度奖励映射为一个混合分数（P-Score），显式记忆层充当了延迟 Reward 的平滑器，极大缓解了高噪声、高漂移环境下的 RL 训练发散问题。说清楚一点：这个公式是我自己的综合构想，不是引用自某一篇论文——它是把 ARS 的置信度加权偏好块和 OneRec 式的 reward 融合放在一起会长什么样。我没有找到已发表的 P-Score 具体权重方案；这里想说明的是这个思路的形状，不是某个具体系数。
 
 ## 5. 安全试车场：User Simulator 的诚实边界
 
@@ -249,9 +248,7 @@ $$ R_{total} = \alpha \cdot R_{immediate} + \beta \cdot \Delta(Memory\_State) $$
 
 为了防止 Simulator 本身陷入对抗性坍塌（Reward Hacking），其核心理念是：不强求 Simulator 去生硬拟合"某个具体用户历史上说过什么"，而是通过强化学习让 Simulator 生成的交互序列，达到连大模型 Judge（裁判模型）都无法分辨真伪的境界。
 
-**Sim-to-Real Gap 的消解发现**：有工作观察到一个有趣的现象——用表现稍弱的模拟用户（Weak Simulator）训练出来的推荐 Policy，在强评估者（乃至真人）身上表现反而更好。**[待补引用]**
-
-因为真人在真实场景下往往具备更强的协作配合倾向（Cooperative Behavior），能够给出更顺畅的引导输入。这在很大程度上缓解了业界对 Sim-to-Real Gap 灾难性失真的顾虑。
+**关于 Sim-to-Real Gap 的一个发现，值得说准确一点**：一个很直觉的说法是——"弱一点、更配合"的模拟用户能缓解 Sim-to-Real Gap，因为真人比合成的模拟器更宽容、更好糊弄。但我查到的证据其实指向相反的方向。一篇 2026 年的论文 [《Beyond Cooperative Simulators》](https://arxiv.org/abs/2605.12894) 报告的结论几乎是反过来的：用更真实、行为更多样化的模拟人设训练出来的 agent，在分布外（out-of-distribution）行为上的鲁棒性，比用同质化、"很配合"的模拟器训练出来的 agent 高出约 17%。也就是说，解决 Sim-to-Real Gap 真正靠谱的办法，不是找一个更弱、更好对付的模拟器，而是找一个更诚实、更不"配合"、更接近真人实际行为的模拟器。
 
 尽管如此，完全杜绝对仿真器漏洞的利用（Reward Hacking against Simulator Quirks）依然充满挑战。目前最现实、在工业界最稳妥的落地路径依然是："Simulator 充当沙盒进行万级步数的规模化预训练 + 极小流量的真实线上 A/B 测试校准"的混合闭环方案。
 
@@ -308,3 +305,5 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
+<script src="https://hypothes.is/embed.js" async></script>
